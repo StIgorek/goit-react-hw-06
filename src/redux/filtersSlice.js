@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const selectNameFilter = (state) => state.name.value;
+export const selectNameFilter = (state) => state.filters.name;
 
 const slice = createSlice({
   name: "filters",
@@ -14,7 +14,3 @@ const slice = createSlice({
 
 export const { changeFilter } = slice.actions;
 export default slice.reducer;
-
-//changeFilter - зміна значення фільтра в властивості name
-//Оголоси функції-селектори для використання в useSelector:
-//selectNameFilter - повертає значення фільтра з властивості name.
